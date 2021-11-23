@@ -1,10 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { RadioOption } from './radio-option.mode';
+import { RadioOption } from './radio-option.model';
 
 @Component({
   selector: 'mt-radio',
   templateUrl: './radio.component.html',
-  styleUrls: ['./radio.component.css']
 })
 export class RadioComponent implements OnInit {
   @Input() options: RadioOption[];
@@ -16,7 +15,7 @@ export class RadioComponent implements OnInit {
   ngOnInit() {
   }
 
-  setValue(option: RadioOption): void {
-    this.value = option.value;
+  setValue(value: string): void {
+    this.value = value;
   }
 }
