@@ -1,7 +1,7 @@
 import { MenuItem } from "../menu-item/menu-item.model";
 import { CartItem } from "./cart-item.model";
 
-export class ShoppinCartService {
+export class ShoppingCartService {
   items: CartItem[] = [];
 
   clear() {
@@ -13,7 +13,7 @@ export class ShoppinCartService {
       (cartItem) => cartItem.menuItem.id === item.id
     );
     if (foundItem) {
-      foundItem.quantity++;
+      this.increaseQty(foundItem);
       // this.items.map(cartItem => {
       //   if (cartItem.menuItem.id === foundItem.menuItem.id) {
       //     cartItem.quantity++;
@@ -33,5 +33,16 @@ export class ShoppinCartService {
     return this.items
       .map((item) => item.value())
       .reduce((prev, value) => prev + value, 0);
+  }
+
+  increaseQty(item: CartItem) {
+    item.quantity = item.quantity + 1;
+  }
+
+  decreaseQty(item: CartItem) {
+    item.quantity = item.quantity - 1;
+    if(item.quantity === 0) {
+      this.removeItem(item);
+    }
   }
 }

@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OrdemItemsComponent } from './ordem-items.component';
+import { OrdemItemsComponent } from './order-items.component';
 
 describe('OrdemItemsComponent', () => {
   let component: OrdemItemsComponent;
