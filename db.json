@@ -370,5 +370,82 @@
       "restaurantId": "tasty-treats"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "address": "Rua teste",
+      "number": "26",
+      "optionalAddress": "casa",
+      "paymentOption": "CREDIT",
+      "orderItems": [
+        {
+          "quantity": 2,
+          "menuId": "cup-cake"
+        },
+        {
+          "quantity": 2,
+          "menuId": "bread"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "address": "Rua teste",
+      "number": "26",
+      "optionalAddress": "casa",
+      "paymentOption": "CREDIT",
+      "orderItems": [
+        {
+          "quantity": 2,
+          "menuId": "cup-cake"
+        },
+        {
+          "quantity": 2,
+          "menuId": "bread"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "address": "Rua teste",
+      "number": "26",
+      "optionalAddress": "rerere",
+      "paymentOption": "MONEY",
+      "orderItems": [
+        {
+          "quantity": 2,
+          "menuId": "starb"
+        },
+        {
+          "quantity": 2,
+          "menuId": "espreso"
+        },
+        {
+          "quantity": 1,
+          "menuId": "capp"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "address": "Rua teste",
+      "number": "26",
+      "optionalAddress": "26",
+      "paymentOption": "MONEY",
+      "orderItems": [
+        {
+          "quantity": 2,
+          "menuId": "starb"
+        },
+        {
+          "quantity": 1,
+          "menuId": "espreso"
+        },
+        {
+          "quantity": 1,
+          "menuId": "capp"
+        }
+      ],
+      "id": 4
+    }
+  ]
 }
