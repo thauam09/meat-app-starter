@@ -27,6 +27,7 @@ import { OrderService } from "./order/order.service";
 import { DeliveryCostsComponent } from './order/delivery-costs/delivery-costs.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { RatingComponent } from './rating/rating.component';
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { RatingComponent } from './rating/rating.component';
     HttpModule,
     RouterModule.forRoot(ROUTES),
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     RestaurantsService,
