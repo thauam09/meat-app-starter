@@ -10,7 +10,7 @@ import { RestaurantsComponent } from "./restaurants/restaurants.component";
 
 export const ROUTES: Routes = [
   { path: "", component: HomeComponent },
-  { path: "about", component: AboutComponent },
+  { path: "about", loadChildren: "./about/about.module#AboutModule" },
   { path: "restaurants", component: RestaurantsComponent },
   {
     path: "restaurants/:id",
