@@ -15,11 +15,8 @@ import { MenuComponent } from "./restaurant-detail/menu/menu.component";
 import { ShoppingCartComponent } from "./restaurant-detail/shopping-cart/shopping-cart.component";
 import { MenuItemComponent } from "./restaurant-detail/menu-item/menu-item.component";
 import { ReviewsComponent } from "./restaurant-detail/reviews/reviews.component";
-import { FormsModule } from "@angular/forms";
 import { OrderSummaryComponent } from "./order-summary/order-summary.component";
-import { ReactiveFormsModule } from "@angular/forms";
 import { SharedModule } from "./shared/shared.module";
-import { CoreModule } from "./core/core.module";
 
 @NgModule({
   declarations: [
@@ -39,8 +36,7 @@ import { CoreModule } from "./core/core.module";
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(ROUTES),
-    SharedModule,
-    CoreModule,
+    SharedModule.forRoot(),
   ],
   providers: [{ provide: LOCALE_ID, useValue: "pt-BR" }],
   bootstrap: [AppComponent],
