@@ -19,14 +19,12 @@ import { ReviewsComponent } from "./restaurant-detail/reviews/reviews.component"
 import { ShoppingCartService } from "./restaurant-detail/shopping-cart/shopping-cart.service";
 import { OrderComponent } from "./order/order.component";
 import { FormsModule } from "@angular/forms";
-import { InputComponent } from "./shared/input/input.component";
-import { RadioComponent } from "./shared/radio/radio.component";
 import { OrdemItemsComponent } from "./order/order-items/order-items.component";
 import { OrderService } from "./order/order.service";
 import { DeliveryCostsComponent } from "./order/delivery-costs/delivery-costs.component";
 import { OrderSummaryComponent } from "./order-summary/order-summary.component";
-import { RatingComponent } from "./rating/rating.component";
 import { ReactiveFormsModule } from "@angular/forms";
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -41,12 +39,9 @@ import { ReactiveFormsModule } from "@angular/forms";
     MenuItemComponent,
     ReviewsComponent,
     OrderComponent,
-    InputComponent,
-    RadioComponent,
     OrdemItemsComponent,
     DeliveryCostsComponent,
     OrderSummaryComponent,
-    RatingComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +49,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     RouterModule.forRoot(ROUTES),
     FormsModule,
     ReactiveFormsModule,
+    SharedModule,
   ],
   providers: [
     RestaurantsService,
