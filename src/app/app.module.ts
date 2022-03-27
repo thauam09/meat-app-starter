@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, LOCALE_ID } from "@angular/core";
 import { HttpModule } from "@angular/http";
 import { RouterModule, PreloadAllModules } from "@angular/router";
+import { LocationStrategy, HashLocationStrategy } from "@angular/common";
 
 import { ROUTES } from "./app.routes";
 
@@ -18,7 +19,7 @@ import { ReviewsComponent } from "./restaurant-detail/reviews/reviews.component"
 import { OrderSummaryComponent } from "./order-summary/order-summary.component";
 import { SharedModule } from "./shared/shared.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from "./not-found/not-found.component";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SharedModule.forRoot(),
     BrowserAnimationsModule,
   ],
-  providers: [{ provide: LOCALE_ID, useValue: "pt-BR" }],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: LOCALE_ID, useValue: "pt-BR" },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
