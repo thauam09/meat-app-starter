@@ -52,7 +52,7 @@ export class OrderComponent implements OnInit {
         address: this.formBuilder.control(""),
         number: this.formBuilder.control(""),
         optionalAddress: this.formBuilder.control(""),
-        paymentOption: this.formBuilder.control(""),
+        paymentOption: this.formBuilder.control("", [Validators.required]),
       },
       { validator: OrderComponent.equalsTo }
     );
